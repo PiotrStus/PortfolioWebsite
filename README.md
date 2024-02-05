@@ -1,10 +1,13 @@
-# PortfolioWebsite
+# Portfolio Website
 
-Used stack: HTML, CSS, JavaScript, React.
+# Technologies:
+* HTML
+* CSS
+* Java Script
+* React
+* Ant Design
 
-CSS frameworks: Ant Design
-
-Setup
+# Setup
 To run this project, install it locally using npm:
 
 ```
