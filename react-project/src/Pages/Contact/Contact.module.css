@@ -1,10 +1,44 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo {
-    height: 13em;
-    padding: 2em;
+    height: 8em;
+    padding: 1.5em;
     will-change: filter;
     transition: filter 300ms;
   }
 
   .logo:hover {
     filter: drop-shadow(0 0 2em green);
+  }
+
+  .logoYT {
+    height: 7.5em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+
+  .logoYT:hover {
+    filter: drop-shadow(0 0 2em green);
+  }
+
+.waviy {
+    position: relative;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
   }

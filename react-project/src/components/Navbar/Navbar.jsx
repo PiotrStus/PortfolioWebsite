@@ -5,13 +5,17 @@ import {Link , useMatch, useResolvedPath} from "react-router-dom"
 function Navbar() {
     return (<nav className={classes.nav}>
         <ul>
-            <CustomLink to="/omnie" className={classes.listElement}>O mnie</CustomLink>
+            <CustomLink to="/" className={classes.listElement}>O mnie</CustomLink>
             <CustomLink to="/portfolio" className={classes.listElement}>Portfolio</CustomLink>
             <CustomLink to="/kontakt" className={classes.listElement}>Kontakt</CustomLink>
             <Link to="https://filmpolski.pl/fp/index.php?osoba=11198905" target="_blank" rel="noopener noreferrer"  className={classes.listElement}>FilmPolski.pl</Link>
         </ul>
-        <Link to="/" className={classes.siteTitle}>Magdalena Tarnawska-Stus
+
+        {/*<Link to="/" className={classes.siteTitle}>Magdalena Tarnawska-Stus */}
+        <Link to="/" className={classes.siteTitle}>
+            Magdalena Tarnawska-Stus
         </Link>
+
     </nav>
     )
 }

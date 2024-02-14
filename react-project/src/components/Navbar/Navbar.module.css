@@ -1,5 +1,6 @@
-
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -9,22 +10,25 @@ body {
 
 .siteTitle {
     font-size: 2rem;
-    
+    margin: 10px;
 }
 
 .listElement {
     font-size: 1rem;
     text-align: center;
+    
+    padding: 10px
 }
+
+
 
 .nav {
     background-color: #333;
     color: white;
-    display: inline;
+    text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
     padding: 0 0rem;
     align-items: stretch;
     position: fixed; 
@@ -37,9 +41,10 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
-    display: flex;
-    gap: 1rem;
+    display:flex;
+
     text-align: center;
+    justify-content: center;
 }
 
 
@@ -50,7 +55,7 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: .25rem;
+    
 }
 
 .navItemActive {
@@ -61,6 +66,24 @@ body {
     background-color: #777;
 }
 
+.waviy {
+    position: relative;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
 
 @media (max-width: 768px) {
     .nav {
@@ -70,23 +93,40 @@ body {
         align-items:center;
         
     }
-
     .nav ul {
         gap: 0; /* Usunięcie odstępu między elementami listy */
         height: 50px;
         width: 100;
     }
-
     .siteTitle {
-        font-size: 0.8rem; /* Zmniejszenie rozmiaru czcionki dla mniejszych ekranów */
-        
+        font-size: 1rem; /* Zmniejszenie rozmiaru czcionki dla mniejszych ekranów */
     }
     
     .listElement {
-        font-size: 0.7rem;
-
-        
-    }
-
+        font-size: 0.8rem;
+        }
 }
 
+
+@media (max-width: 400px) {
+    .nav {
+        /*align-items: flex-start; */
+        padding: 0 0rem;
+        height: 50px;
+        align-items:center;
+        
+    }
+    .nav ul {
+        gap: 0; /* Usunięcie odstępu między elementami listy */
+        height: 50px;
+    }
+    .siteTitle {
+        font-size: 0.7rem; /* Zmniejszenie rozmiaru czcionki dla mniejszych ekranów */
+        padding: 4px
+    }
+    
+    .listElement {
+        font-size: 0.6rem;
+        padding: 4px
+        }
+}
