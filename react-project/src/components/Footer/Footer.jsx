@@ -6,7 +6,7 @@ import emailLogo from '..//../assets/email.svg'
 
 function Footer() {
     return (
-        <section className={classes.footer} >
+        <div className={classes.footer} id="footer">
                 <div className={classes.about}>
                     <div className={classes.waviy}>
                         <h3>
@@ -18,7 +18,9 @@ function Footer() {
                             <span style={{'--i':6}}>e</span>
                         </h3>
                     </div>
-                    <p>Urodzona w 1995 roku w Sanoku, dyplomowana aktorka teatralna, filmowa, telewizyjna oraz głosowa, w 2022 roku ukończyła AST we Wrocławiu.</p>
+                    <div className={classes.testP}>
+                    <p>Urodzona w 1995 roku w Sanoku, dyplomowana aktorka teatralna, filmowa i telewizyjna. Ukończyła AST we Wrocławiu w 2022 roku .</p>
+                    </div>
                 </div>
                 <div className={classes.social}>
                     <h3>Social Media</h3>
@@ -31,7 +33,7 @@ function Footer() {
                     <img src={emailLogo} className={classes.logoEmail} alt="Instagram logo" />
                     <p>m.tarnawska95@wp.pl</p>
                 </div>
-        </section>
+        </div>
     )
 }
 

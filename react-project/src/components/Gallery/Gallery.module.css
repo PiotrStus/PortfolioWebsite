@@ -9,6 +9,7 @@
     column-width: 25%;
     padding: 0 250px;
     /*border: red solid 5px;*/
+    
 }
 
 .gallery .pics{
@@ -16,11 +17,26 @@
     transition: all 350ms ease;
     cursor: pointer;
     margin-bottom: 13px;
+    width: 100%; /* Ustaw szerokość kontenera obrazu */
+    height: 350px; /* Ustaw wysokość kontenera obrazu (dostosuj według potrzeb) */
+    cursor: pointer;
+    overflow: hidden; /* Ukryj ewentualne przekroczenia */
+}
+
+.gallery .pics img{
+    width: 100%; /* Obraz wypełni całą szerokość kontenera */
+    height: 100%; /* Obraz wypełni całą wysokość kontenera */
+    object-fit: cover; /* Dopasuj obraz do wymiarów kontenera, zachowując proporcje */
+    transition: transform 350ms ease;
 }
 
 .gallery .pics:hover{
-    filter: opacity(.8)
+    filter: opacity(.8);
+    transform: scale(1.05); 
 }
+
+
+
 
 @media (max-width: 991px) {
     .gallery {

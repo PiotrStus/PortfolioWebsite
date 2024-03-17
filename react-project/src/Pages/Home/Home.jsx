@@ -1,18 +1,53 @@
 //import reactLogo from './assets/react.svg'
-import daldof from '..//../assets/daldof.mp3'
-import {PlaySquareFilled} from '@ant-design/icons';
-import classes from "./Home.module.css"
-import { Carousel } from 'antd';
-import Img1 from '../../img/01.jpg'
-import Img2 from '../../img/02.jpg'
-import Img3 from '../../img/03.jpg'
+import daldof from "..//../assets/daldof.mp3";
+import { PlaySquareFilled } from "@ant-design/icons";
+import classes from "./Home.module.css";
+import { Carousel } from "antd";
+import Img1 from "../../img/01.jpg";
+import Img2 from "../../img/02.jpg";
+import Img13 from "../../img/13.jpg";
+import Img11 from "../../img/11.jpg";
 
 function Home() {
-return (
-    <>
-    <h1>Strona główna</h1>
+	return (
+		<>
+			<h1>O mnie</h1>
 
-    <div className={classes.mainContent}>
+			<div className={classes.mainContent} id="about">
+				<div className={classes.karuzela}>
+					<Carousel autoplay effect="fade">
+						<div className={classes.carousel}>
+							<img src={Img11} alt="Opis zdjecia" />
+						</div>
+						<div className={classes.carousel}>
+							<img src={Img1} alt="Opis zdjecia" />
+						</div>
+						<div className={classes.carousel}>
+							<img src={Img13} alt="Opis zdjecia" />
+						</div>
+					</Carousel>
+				</div>
+				<div className={classes.aboutText}>
+					<p>
+						Cześć, nazywam się Magdalena Tarnawska-Stus. Jestem dyplomowaną
+						aktorką. Ukończyłam AST we Wrocławiu z wyróżnieniem na 39. Festwialu
+						Szkół Teatralnych w Łodzi i obroną pracy magisterskiej w 2022 r.
+					</p>
+					<p>
+						Uwielbiam to co nowe i nieznane, wykraczanie poza strefę komfortu i
+						odkrywanie. Na co dzień biegam. Od ponad roku rozwijam swój wokal
+						pod bacznym okiem trenera.{" "}
+					</p>
+					<p>
+						W aktorskie szczególnie szanuję wolność i różnorodność, pochylanie
+						się nad człowiekiem jako istotą bez kolorowania, bez oceniania i
+						definiowania. To coś na co często nie mamy szansy w codziennym życiu
+						– przyjrzeniu się wewnętrznemu życiu danej postaci w celu
+						zrozumieniu jej zachowania i motywów działań.{" "}
+					</p>
+				</div>
+				{/*
+    <div className={classes.span1}>
     <p>
         <span>There</span>
         <span>are</span>
@@ -33,6 +68,8 @@ return (
         <span>own</span>
         <span>thinking.</span>
     </p>
+    </div>
+    <div className={classes.span2}>
         <p>
         <span>Lorem</span>
         <span>ipsum</span>
@@ -55,32 +92,37 @@ return (
         <span>magna</span>
         <span>aliqua.</span>
         </p>
-        <Carousel autoplay effect="fade">
-            <div className={classes.carousel}>
-                <img src={Img1} alt="Opis zdjecia" />
-            </div>
-            <div className={classes.carousel}>
-                <img src={Img2} alt="Opis zdjecia" />
-            </div>
-            <div className={classes.carousel}>
-                <img src={Img3} alt="Opis zdjecia" />
-            </div>
-        </Carousel>
-    </div>
-    <p></p>
+    </div> 
+    */}
+			</div>
+			<p></p>
+			<div className={classes.youTube}>
+				<iframe
+					src="https://www.youtube.com/embed/xRyXC5T5NW0"
+					title="Wizytówka 2024 - Magdalena Tarnawska-Stus"
+					frameBorder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen
+				></iframe>
+				<p></p>
+			</div>
 
-
-    <div className={classes.audioContainer}>
-        <PlaySquareFilled className={classes.player}/>
-        <div className={classes.player2}>
-        <p>Dream a little dream - cover</p>
-        <audio controls className={classes.audio}>
-            <source src={daldof} type="audio/mp3" />
-                Twoja przeglądarka nie obsługuje elementu audio.
-        </audio>
-        </div>
-    </div>
-    </>
-)}
+			<div className={classes.audioContainer}>
+				<PlaySquareFilled className={classes.player} />
+				<div className={classes.player2}>
+					<div>
+						<p>Dream A Little Dream Of Me</p>
+					</div>
+					<div className={classes.audio}>
+						<audio controls>
+							<source src={daldof} type="audio/mp3" />
+							Twoja przeglądarka nie obsługuje elementu audio.
+						</audio>
+					</div>
+				</div>
+			</div>
+		</>
+	);
+}
 
 export default Home;

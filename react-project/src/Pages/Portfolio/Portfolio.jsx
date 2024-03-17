@@ -2,8 +2,8 @@ import Gallery from "../../components/Gallery/Gallery";
 
 function Portfolio() {
     return (
-        <div>
-            <h1>Portrety</h1>
+        <div id="portfolio">
+            <h1>Portfolio</h1>
             <Gallery />
         </div>
     )

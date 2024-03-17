@@ -9,6 +9,8 @@
     flex-direction: row;
     justify-content: center;
     gap:8px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .player2 {
@@ -25,8 +27,32 @@
 }
 
 .carousel{
-    height: 460px;
+    height: 660px;
     background-color: #242424;
+}
+
+.aboutText{
+  text-align: justify;
+  justify-content: center;;
+  width: 70%;
+  margin-top: 50px;
+ 
+}
+
+
+
+
+.aboutText p {
+  margin: 20px;
+  text-align: justify;
+  font-size: 25px;
+  margin-left: 0px;
+  width: 100%;
+  justify-content: center;
+}
+
+.karuzela {
+  width: 30%;
 }
 
 .carousel img {
@@ -39,7 +65,8 @@
 
 .mainContent {
     display: flex;
-    flex-direction: column;
+
+    justify-content: center;
     width: 100%;
 }
 
@@ -55,7 +82,8 @@
         margin-right: 5px;
 }
 
-span:nth-child(1) {
+.span1 {
+  span:nth-child(1) {
     animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
   
@@ -132,6 +160,87 @@ span:nth-child(1) {
   span:nth-child(20) {
     animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
+}
+
+.span2 {
+    span:nth-child(1) {
+      animation: fade-in 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(2) {
+      animation: fade-in 0.8s 2.0s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(3) {
+      animation: fade-in 0.8s 2.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(4) {
+      animation: fade-in 0.8s 2.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(5) {
+      animation: fade-in 0.8s 2.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(6) {
+      animation: fade-in 0.8s 2.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(7) {
+      animation: fade-in 0.8s 2.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(8) {
+      animation: fade-in 0.8s 2.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(9) {
+      animation: fade-in 0.8s 2.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(10) {
+      animation: fade-in 0.8s 2.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(11) {
+      animation: fade-in 0.8s 2.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(12) {
+      animation: fade-in 0.8s 3.0s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(13) {
+      animation: fade-in 0.8s 3.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(14) {
+      animation: fade-in 0.8s 3.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(15) {
+      animation: fade-in 0.8s 3.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(16) {
+      animation: fade-in 0.8s 3.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(17) {
+      animation: fade-in 0.8s 3.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(18) {
+      animation: fade-in 0.8s 3.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    span:nth-child(19) {
+      animation: fade-in 0.8s 3.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    span:nth-child(20) {
+      animation: fade-in 0.8s 3.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+  }
 
   @keyframes fade-in {
     100% {
@@ -148,14 +257,74 @@ span:nth-child(1) {
 
   }
 
-  .audio {
-    width: auto;
+ 
+
+  iframe {
+    width:822px;
+    height:472px;
+  }
+
+  .youTube {
+    width: 100%;
   }
 
 
   @media (max-width: 480px) {
     .player2 p {
-
       font-size: 16px;
     }
+
+    .aboutText p {
+      font-size: 18px;
+      margin: 0px;
+      margin-bottom: 10px;
+    }
+
+    .aboutText {
+      
+      width: 100%;
+    }
+
+    .carousel {
+      height: 50%;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 50%;
+      object-fit: contain;
+      align-items: center;
   }
+
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+}
+
+  .karuzela {
+    margin-top: 30px;
+    width: 100%;
+    height: 30%;
+  }
+
+  iframe {
+    width:322px;
+    height:372px;
+  }
+
+  .audio {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .player {
+    display:none;
+  }
+  .audioContainer {
+    flex-direction: column;
+  }
+
+  }
+
+
